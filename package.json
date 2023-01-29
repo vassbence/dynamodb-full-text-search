@@ -1,0 +1,19 @@
+{
+  "name": "dynamodb-full-text-search",
+  "scripts": {
+    "build": "tsc --noEmit && esbuild src/indexer-lambda.ts src/query-lambda.ts --bundle --minify --platform=node --target=node18 --outdir=dist"
+  },
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "3.259.0",
+    "@aws-sdk/lib-dynamodb": "3.259.0",
+    "@aws-sdk/util-dynamodb": "3.259.0",
+    "@lyrasearch/lyra": "0.4.4",
+    "@lyrasearch/plugin-data-persistence": "0.0.6"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "8.10.110",
+    "@types/node": "18.11.18",
+    "esbuild": "0.17.5",
+    "typescript": "4.9.4"
+  }
+}
